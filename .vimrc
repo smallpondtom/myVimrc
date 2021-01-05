@@ -137,6 +137,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_javascript_checkers = ['jshint', 'eslint']
 let g:syntastic_haskell_checkers = ['hlint']
+let g:syntastic_ruby_checkers = ['rubocop']
 
 "===> VimRainbow
 " let g:rainbow_active = 1
