@@ -46,9 +46,10 @@ Plugin 'tomasr/molokai'
 
 "===> Linting and Syntax Checker
 Plugin 'scrooloose/syntastic'
-Plugin 'valloric/youcompleteme'  " install cmake and compile YCM
+" Plugin 'valloric/youcompleteme'  " install cmake and compile YCM
 								 " cd ~/.vim/bundle/YouCompleteMe
 								 " python3 install.py --all
+Plugin 'neoclide/coc.nvim'
 
 "===> Git Integration
 Plugin 'tpope/vim-fugitive'
@@ -129,6 +130,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_python_checkers=['flake8', 'pylint']
 let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_c_checkers = ['cpplint', 'make']
