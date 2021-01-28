@@ -68,6 +68,9 @@ Plugin 'jaspervdj/stylish-haskell'
 Plugin 'nbouscal/vim-stylish-haskell'
 
 
+"===> Rust
+Plugin 'rust-lang/rust.vim'
+
 " All Plugins must be added before the following lines
 call vundle#end()			" required
 filetype plugin indent on   " required
@@ -232,6 +235,8 @@ let g:hindent_command = "stack exec -- hindent"
 " Stylish haskell
 let g:stylish_haskell_command="~/.stylish-haskell.yaml"
 
+"===> Rust configs
+let g:rustfmt_autosave = 1
 
 "===> Basic Configs
 filetype plugin indent on
