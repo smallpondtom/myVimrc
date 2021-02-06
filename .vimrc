@@ -5,6 +5,7 @@
 set encoding=UTF-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set exrc
+set shell=/bin/bash
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
