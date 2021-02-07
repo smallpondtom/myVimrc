@@ -36,6 +36,7 @@ Plugin 'ryanoasis/vim-devicons'
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
