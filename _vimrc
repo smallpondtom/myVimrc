@@ -1,11 +1,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tomoki Koike vimrc file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This vimrc is specifically for my powershell setup
+" Tomoki Koike vimrc file 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 
-set encoding=UTF-8
-set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
-set exrc
+" This vimrc is specifically for my powershell setup 
+set encoding=UTF-8 
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis 
+set exrc 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -37,8 +37,11 @@ Plugin 'ryanoasis/vim-devicons'
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'yegappan/grep'
+Plugin 'jremmen/vim-ripgrep'
 
 "===> Visuals and Colorscheme
 Plugin 'altercation/vim-colors-solarized'
