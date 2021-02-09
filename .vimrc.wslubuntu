@@ -32,6 +32,10 @@ Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdcommenter'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'majutsushi/tagbar'
+Plugin 'godlygeek/tabular'
+Plugin 'mg979/vim-visual-multi'
+Plugin 'chiel92/vim-autoformat'
 
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
@@ -147,14 +151,14 @@ let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_ruby_checkers = ['rubocop']
 
 "===> VimRainbow
-" let g:rainbow_active = 1
+let g:rainbow_active = 1
 
-" let g:rainbow_load_separately = [
-"    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-"    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-"    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-"    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-"    \ ]
+let g:rainbow_load_separately = [
+   \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+   \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+   \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+   \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+   \ ]
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
@@ -201,6 +205,13 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
+
+"===> Tagbar configuration 
+nmap <F8> :TagbarToggle<CR>
+" Download exuberant-ctags => sudo apt-get install exuberant c-tags
+
+"===> AutoFormat configuration
+noremap <F3> :Autoformat<CR>
 
 "===> NerdTree Syntax Highlight
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
@@ -255,7 +266,7 @@ set nowritebackup
 set secure
 colorscheme gruvbox 
 set guifont=Monospace\ 12
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set guifont=Hack\ Bold\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible
 set fillchars+=vert:\$
 set t_Co=256
 set ruler
@@ -282,8 +293,10 @@ nnoremap tn :tabnext<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
 inoremap jj <Esc>
+vnoremap uu <Esc>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 noremap E ge
+noremap vv <C-v>
