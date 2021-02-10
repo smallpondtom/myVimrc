@@ -1,6 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tomoki Koike vimrc file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 set encoding=UTF-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
@@ -32,6 +32,10 @@ Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdcommenter'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'majutsushi/tagbar'
+Plugin 'godlygeek/tabular'
+Plugin 'mg979/vim-visual-multi'
+Plugin 'chiel92/vim-autoformat'
 
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
@@ -202,6 +206,14 @@ if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
 
+
+"===> Tagbar configuration 
+nmap <F8> :TagbarToggle<CR>
+" Download exuberant-ctags => sudo apt-get install exuberant c-tags
+
+"===> AutoFormat configuration
+noremap <F3> :Autoformat<CR>
+
 "===> NerdTree Syntax Highlight
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
@@ -294,6 +306,7 @@ nnoremap tn :tabnext<Space>
 nnoremap tm :tabm<Space>
 nnoremap td :tabclose<CR>
 inoremap jj <Esc>
+vnoremap uu <Esc>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
