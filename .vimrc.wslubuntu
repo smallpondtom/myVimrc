@@ -36,6 +36,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'chiel92/vim-autoformat'
+Plugin 'tell-k/vim-autopep8'
 
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
@@ -313,3 +314,4 @@ nmap <silent> <c-l> :wincmd l<CR>
 noremap E ge
 noremap vv <C-v>
 autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
+set colorcolumn=79
