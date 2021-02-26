@@ -11,8 +11,8 @@ set shell=/bin/bash
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set nocompatible 			" be improved required
-filetype off				" required
+set nocompatible            " be improved required
+filetype off                " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -53,8 +53,8 @@ Plugin 'tomasr/molokai'
 "===> Linting and Syntax Checker
 Plugin 'scrooloose/syntastic'
 " Plugin 'valloric/youcompleteme'  " install cmake and compile YCM
-								 " cd ~/.vim/bundle/YouCompleteMe
-								 " python3 install.py --all
+" cd ~/.vim/bundle/YouCompleteMe
+" python3 install.py --all
 Plugin 'neoclide/coc.nvim'
 
 "===> Git Integration
@@ -78,7 +78,7 @@ Plugin 'nbouscal/vim-stylish-haskell'
 Plugin 'rust-lang/rust.vim'
 
 " All Plugins must be added before the following lines
-call vundle#end()			" required
+call vundle#end()           " required
 filetype plugin indent on   " required
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,18 +99,18 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 "===> NerdTreeGitPlugin
-" let g:NERDTreeGitStatusIndicatorMapCustom = {
-"                 \ 'Modified'  :'✹',
-"                 \ 'Staged'    :'✚',
-"                 \ 'Untracked' :'✭',
-"                 \ 'Renamed'   :'➜',
-"                 \ 'Unmerged'  :'═',
-"                 \ 'Deleted'   :'✖',
-"                 \ 'Dirty'     :'✗',
-"                 \ 'Ignored'   :'☒',
-"                 \ 'Clean'     :'✔︎',
-"                 \ 'Unknown'   :'?',
-"                 \ }
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+            \ 'Modified'  :'✹',
+            \ 'Staged'    :'✚',
+            \ 'Untracked' :'✭',
+            \ 'Renamed'   :'➜',
+            \ 'Unmerged'  :'═',
+            \ 'Deleted'   :'✖',
+            \ 'Dirty'     :'✗',
+            \ 'Ignored'   :'☒',
+            \ 'Clean'     :'✔︎',
+            \ 'Unknown'   :'?',
+            \ }
 let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
 
 "===> GitGutter
@@ -154,11 +154,11 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:rainbow_active = 1
 
 let g:rainbow_load_separately = [
-   \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-   \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-   \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-   \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-   \ ]
+            \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+            \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+            \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+            \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+            \ ]
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
@@ -194,7 +194,7 @@ let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
 
 "===> Vim-Devicons
@@ -206,12 +206,13 @@ if exists('g:loaded_webdevicons')
     call webdevicons#refresh()
 endif
 
-"===> Tagbar configuration 
+"===> Tagbar configuration
 nmap <F8> :TagbarToggle<CR>
 " Download exuberant-ctags => sudo apt-get install exuberant c-tags
 
 "===> AutoFormat configuration
 noremap <F3> :Autoformat<CR>
+let g:formatter_yapf_style = 'pep8'
 
 "===> NerdTree Syntax Highlight
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
@@ -232,7 +233,7 @@ nnoremap <silent> <Leader>g :Commits<CR>
 nnoremap <silent> <Leader>H :Helptags<CR>
 nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
-nnoremap <silent> <Leader>h/ :History/<CR> 
+nnoremap <silent> <Leader>h/ :History/<CR>
 
 "===> Haskell configs
 " Disable haskell-vim omnifunc
@@ -251,7 +252,7 @@ let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
-" hindent 
+" hindent
 let g:hindent_on_save = 1
 let g:hindent_indent_size = 2
 let g:hindent_command = "stack exec -- hindent"
@@ -275,7 +276,7 @@ set nobackup
 set noswapfile
 set nowritebackup
 set secure
-colorscheme gruvbox 
+colorscheme gruvbox
 set guifont=Monospace\ 12
 set guifont=Hack\ Bold\ Nerd\ Font\ Complete\ Mono\ Windows\ Compatible
 set fillchars+=vert:\$
@@ -311,3 +312,4 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 noremap E ge
 noremap vv <C-v>
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
