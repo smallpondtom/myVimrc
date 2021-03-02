@@ -36,6 +36,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'godlygeek/tabular'
 Plugin 'mg979/vim-visual-multi'
 Plugin 'chiel92/vim-autoformat'
+Plugin 'tell-k/vim-autopep8'
 
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
@@ -213,6 +214,7 @@ nmap <F8> :TagbarToggle<CR>
 
 "===> AutoFormat configuration
 noremap <F3> :Autoformat<CR>
+let g:formatter_yapf_style = 'pep8'
 
 "===> NerdTree Syntax Highlight
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
@@ -312,3 +314,5 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 noremap E ge
+autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
+set colorcolumn=79
