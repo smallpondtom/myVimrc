@@ -38,6 +38,9 @@ Plugin 'mg979/vim-visual-multi'
 Plugin 'chiel92/vim-autoformat'
 Plugin 'tell-k/vim-autopep8'
 
+"===> Latex 
+Plugin 'lervag/vimtex'
+
 "===> File Explorer
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf'
@@ -77,6 +80,10 @@ Plugin 'nbouscal/vim-stylish-haskell'
 
 "===> Rust
 Plugin 'rust-lang/rust.vim'
+
+"===> GoLang
+Plugin 'fatih/vim-go'
+
 
 " All Plugins must be added before the following lines
 call vundle#end()           " required
@@ -150,6 +157,7 @@ let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_javascript_checkers = ['jshint', 'eslint']
 let g:syntastic_haskell_checkers = ['hlint']
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
 "===> VimRainbow
 let g:rainbow_active = 1
