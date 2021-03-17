@@ -267,13 +267,13 @@ let g:stylish_haskell_command="~/.stylish-haskell.yaml"
 let g:rustfmt_autosave = 1
 
 " Auto running files depending on programming language 
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
-autocmd FileType go nnoremap <buffer> <F5> :w<CR>:vert ter go run "%"<CR>
-autocmd FileType haskell nnoremap <buffer> <F5> :w<CR>:vert ter runhaskell "%"<CR>
-autocmd FileType cpp nnoremap <F5> :w<bar>:!g++ % -o %:r && ./%:r<CR>
-autocmd FileType c nnoremap <F5> :w<bar>:!gcc % -o %:r && ./%:r<CR>
-autocmd FileType rust nnoremap <F5> :w<bar>:!rustc % && ./%:r<CR>
-autocmd FileType ruby nnoremap <buffer> <F5> :w<CR>:vert ter ruby %<CR>
+autocmd Filetype python nnoremap <Leader>run :w<CR>:vert ter python3 "%"<CR>
+autocmd FileType go nnoremap <Leader>run :w<CR>:vert ter go run "%"<CR>
+autocmd FileType haskell nnoremap <Leader>run :w<CR>:vert ter runhaskell "%"<CR>
+autocmd FileType cpp nnoremap <Leader>run :w<bar>:!g++ % -o %:r && ./%:r<CR>
+autocmd FileType c nnoremap <Leader>run :w<bar>:!gcc % -o %:r && ./%:r<CR>
+autocmd FileType rust nnoremap <Leader>run :w<bar>:!rustc % && ./%:r<CR>
+autocmd FileType ruby nnoremap <Leader>run :w<CR>:vert ter ruby %<CR>
 
 "===> Basic Configs
 filetype plugin indent on
