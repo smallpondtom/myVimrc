@@ -41,7 +41,7 @@ call dein#add('neoclide/coc.nvim', {'branch': 'release'})
 call dein#add('philrunninger/nerdtree-visual-selection')
 call dein#add('tiagofumo/vim-nerdtree-syntax-highlight')
 call dein#add('xuyuanp/nerdtree-git-plugin')
-call dein#add("junegunn/fzf, {'do': { -> fzf#install() } }")
+call dein#add("junegunn/fzf")
 call dein#add('junegunn/fzf.vim')
 call dein#add('nvim-lua/popup.nvim')
 call dein#add('nvim-lua/plenary.nvim')
@@ -68,6 +68,7 @@ syntax enable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "===> Nerdtree
+" !!!After openning Nerdtree press "m" to open the NerdTree Filesystem Menu!!!
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 let NERDTreeMinimalUI = 1
@@ -94,6 +95,16 @@ nnoremap <C-f> :NERDTreeFind<CR>
 "                 \ 'Unknown'   :'?',
 "                 \ }
 let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
+
+"===> Nerdtree-visual-selection
+" NERDTree variable 	default 	Purpose
+" NERDTree MapActivateNode 	o 	Open selected files.
+" NERDTree MapOpenSplit 	i 	Open selected files in horizontal splits.
+" NERDTree MapOpenVSplit 	s 	Open selected files in vertical splits.
+" NERDTree MapOpenInTab 	t 	Open selected files in tabs.
+" n/a 	dd 	Delete selected files from disk. If open in Vim, they remain open.
+" n/a 	m 	Move the selected files to another directory. If open in Vim, the buffer still points to its old location.
+" n/a 	c 	Copy selected files to another directory.
 
 "===> GitGutter
 set signcolumn=yes
@@ -155,16 +166,16 @@ if exists('g:loaded_webdevicons')
 endif
 
 "===> FZF
-nnoremap <silent> <Leader>b :Buffers<CR>
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <Leader>f :Rg<CR>
-nnoremap <silent> <Leader>/ :BLines<CR>
-nnoremap <silent> <Leader>' :Marks<CR>
-nnoremap <silent> <Leader>g :Commits<CR>
-nnoremap <silent> <Leader>H :Helptags<CR>
-nnoremap <silent> <Leader>hh :History<CR>
-nnoremap <silent> <Leader>h: :History:<CR>
-nnoremap <silent> <Leader>h/ :History/<CR> 
+" nnoremap <silent> <Leader>b :Buffers<CR>
+" nnoremap <silent> <C-f> :Files<CR>
+" nnoremap <silent> <Leader>f :Rg<CR>
+" nnoremap <silent> <Leader>/ :BLines<CR>
+" nnoremap <silent> <Leader>' :Marks<CR>
+" nnoremap <silent> <Leader>g :Commits<CR>
+" nnoremap <silent> <Leader>H :Helptags<CR>
+" nnoremap <silent> <Leader>hh :History<CR>
+" nnoremap <silent> <Leader>h: :History:<CR>
+" nnoremap <silent> <Leader>h/ :History/<CR>
 
 " >>> VIM-EASY-ALIGN
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -239,6 +250,7 @@ autocmd FileType ruby nnoremap <buffer> <F5> :w<CR>:vert ter ruby %<CR>
 set nobackup
 set noswapfile
 set nowritebackup
+set ma
 set ruler
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
