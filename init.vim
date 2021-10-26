@@ -48,6 +48,8 @@ call dein#add('nvim-lua/plenary.nvim')
 call dein#add('nvim-telescope/telescope.nvim')
 call dein#add('pwntester/octo.nvim')
 call dein#add('w0rp/ale')
+call dein#add('ray-x/lsp_signature.nvim')
+call dein#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
 
 " Required:
 call dein#end()
@@ -66,6 +68,38 @@ syntax enable
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"===> TREESITTER
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      ["foo.bar"] = "Identifier",
+    },
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+"===> LSP_SIGNATURE
+lua<<EOF
+local example_setup = {
+  on_attach = function(client, bufnr)
+    require "lsp_signature".on_attach({
+      bind = true, -- This is mandatory, otherwise border config won't get registered.
+      handler_opts = {
+        border = "single"
+      }
+    }, bufnr)
+  end,
+}
+EOF
 
 "===> Nerdtree
 " !!!After openning Nerdtree press "m" to open the NerdTree Filesystem Menu!!!
