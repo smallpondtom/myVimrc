@@ -1,7 +1,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TOMOKI KOIKE NEOVIM CONFIG FILE 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"  /_  __/___  ____ ___  ____  / /__(_)___  (_) /__   __(_)___ ___
+"   / / / __ \/ __ `__ \/ __ \/ //_/ / __ \/ / __/ | / / / __ `__ \
+"  / / / /_/ / / / / / / /_/ / ,< / / / / / / /__| |/ / / / / / / /
+" /_/  \____/_/ /_/ /_/\____/_/|_/_/_/ /_/_/\__(_)___/_/_/ /_/ /_/
+                                                                 
 set encoding=UTF-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set exrc
@@ -50,6 +54,7 @@ call dein#add('pwntester/octo.nvim')
 call dein#add('w0rp/ale')
 call dein#add('ray-x/lsp_signature.nvim')
 call dein#add('nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'})
+call dein#add('kkoomen/vim-doge', { 'do': { -> doge#install() } })
 
 " Required:
 call dein#end()
@@ -59,15 +64,18 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+ call dein#install()
+endif
 
 " >>> END DEIN SCRIPTS
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configurations
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"===> DOGE
+let g:doge_doc_standard_python = 'numpy'
 
 "===> TREESITTER
 lua <<EOF
