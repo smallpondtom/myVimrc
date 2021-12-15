@@ -1,0 +1,49 @@
+Description:
+  Plan to create my own custom neovim during Winter break of 2021-2022.
+
+Requirements:
+  >> Best performance for the following language developments
+    - Python
+    - C/C++
+    - Markdown
+    - Lua
+    - Haskell
+  >> Should be minimal
+  >> Easy to use and easy to debug for myself
+  >> Will make use of the built-in neovim language servers and features with 
+     optimal performance
+  >> Aesthetically the most astonishing finish (in my personal preference)
+
+Plugins:
+  - packer.nvim
+  - nvim-lspconfig
+  - nvim-lspconfig
+  - null-ls.nvim
+  - telescope.nvim
+  - trouble.nvim
+  - nvim-lsp-installer
+  - lsp-signature.nvim
+  - plenary.nvim
+  - telescope.nvim
+  - telescope-fzf-native.nvim
+  - nvim-cmp
+  - LuaSnip
+  - cmp_luasnip
+  - cmp-nvim-lsp
+  - cmp-buffer
+  - cmp-path
+  - cmp-nvim-lua
+  - nvim-autopairs
+  - nvim-treesitter
+  - nvim-tree.lua
+  - gitsigns.nvim
+  - which-key.nvim
+  - comment.nvim
+  - nvim-web-devicons
+  - project.nvim
+  - lualine.nvim
+  - barbar.nvim
+  - nvim-dap
+  - DAPInstall.nvim
+  - dashboard.nvim
+  - vim-doge
